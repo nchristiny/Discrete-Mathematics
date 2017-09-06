@@ -1,0 +1,713 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+% Heavily modified by:
+% Nicholas Christiny (http://nchristiny.com/)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, oneside]{article} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+%\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm,geometry} % Math packages
+
+\usepackage{array}
+\newcolumntype{C}{>$c<$}
+\usepackage{multirow}
+
+\usepackage{sectsty} % Allows customizing section commands
+%\allsectionsfont{\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{{\footnotesize{Math146 HW1}}} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{Page \thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+%\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+%\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+\setcounter{secnumdepth}{0} % Suppress section numbering
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{Daley College, Fall 2017} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Discrete Mathematics Homework 1 \\
+\huge Logic and Methods of Proof \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Nicholas Christiny} % Your name
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+\section{\textsection1.1 \\ 1. Which of these sentences are propositions? What are the truth values of those that are propositions?}
+
+%\lipsum[2] % Dummy text
+
+%\begin{align} 
+%\begin{split}
+%(x+y)^3 	&= (x+y)^2(x+y)\\
+%&=(x^2+2xy+y^2)(x+y)\\
+%&=(x^3+2x^2y+xy^2) + (x^2y+2xy^2+y^3)\\
+%&=x^3+3x^2y+3xy^2+y^3
+%\end{split}					
+%\end{align}
+
+%------------------------------------------------
+
+\subsection{a) Boston is the capital of Massachusetts.}
+Yes, true
+\subsection{b) Miami is the capital of Florida.}
+Yes, false
+\subsection{c) $2 + 3 = 5$}
+Yes, true
+\subsection{d) $5 + 7 = 10$}
+Yes, false
+\subsection{e) $x + 2 = 11$}
+No
+\subsection{f) Answer this question.}
+No
+
+%\begin{align}
+%A = 
+%\begin{bmatrix}
+%A_{11} & A_{21} \\
+%A_{21} & A_{22}
+%\end{bmatrix}
+%\end{align}
+
+%------------------------------------------------
+
+%\subsubsection{Heading on level 3 (subsubsection)}
+
+%\lipsum[3] % Dummy text
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+\section{2. Which of these are propositions? What are the truth values of those that are propositions?}
+
+%----------------------------------------------------------------------------------------
+
+\subsection{a) Do not pass go.}
+No
+\subsection{b) What time is it?}
+No
+\subsection{c) There are no black flies in Maine}
+Yes, false
+
+%----------------------------------------------------------------------------------------
+\section{3. What is the negation of each of these propositions?}
+\subsection{a) Mei has an MP3 player.}
+Mei does not have an MP3 player.
+\subsection{b) There is no pollution in New Jersey.}
+There is pollution in New Jersey.
+\subsection{c) $2 + 1 = 3$}
+Two plus one does not equal three. ($2 + 1 \neq 3$)
+\subsection{d) The summer in Maine is hot and sunny.}
+The summer in Maine is not hot and sunny.
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\section{4. What is the negation of each of these propositions?}
+\subsection{a) Jennifer and Teja are friends.}
+Jennifer and Teja are not friends.
+\subsection{b) There are 13 items in a baker$'$s dozen.}
+There are not 13 items in a baker's dozen.
+\subsection{c) Abby sent more than 100 text messages every day.}
+Abby does not send more than 100 text messages every day, thank you very much.
+\subsection{d) 121 is a perfect square.}
+121 is not a perfect square
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\section{7. Suppose that during the most recent fiscal year, the annual revenue of Acme Computer was 138 billion dollars and its net profit was 8 billion dollars, the annual revenue of Nadir Software was 87 billion dollars and its net profit was 5 billion dollars, and the annual revenue of Quixote Media was 111 billion dollars and its net profit was 13 billion dollars.\\
+Determine the truth value of each of these propositions for the most recent fiscal year.}
+\subsection{a) Quixote Media had the largest annual revenue.}
+False
+\subsection{b) Nadir Software had the lowest net profit and Acme Computer had the largest annual revenue.}
+True
+\subsection{c) Acme Computer had the largest net profit or Quixote Media had the largest net profit.}
+True
+\subsection{d) If Quixote Media had the smallest net profit, then Acme Computer had the largest annual revenue.}
+True
+\subsection{e) Nadir Software had the smallest net profit if and only if Acme Computer had the largest annual revenue.}
+True
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\section{9. Let p and q be the propositions \texttt{"}Swimming at the New Jersey shore is allowed\texttt{"} and \texttt{"}Sharks have been spotted near the shore,\texttt{"} respectively. Express each of these compound propositions as an English sentence.}
+\subsection{a) $\neg$q}
+Sharks have not been spotted near the shore.
+\subsection{b) p $\wedge$ q}
+Swimming in the New Jersey shore is allowed and sharks have been spotted near the shore.
+\subsection{c) $\neg$p $\vee$ q}
+Swimming is not allowed or sharks have been spotted.
+\subsection{d) p $\rightarrow$ $\neg$q}
+If swimming is allowed, then sharks have not been spotted.
+\subsection{e) $\neg$q $\rightarrow$ p}
+If sharks have not been spotted, then swimming is allowed.
+\subsection{f) $\neg$p $\rightarrow$ $\neg$q}
+If swimming is not allowed, then sharks have not been spotted.
+\subsection{g) p $\leftrightarrow$ $\neg$q}
+Swimming is allowed if and only if sharks have not been spotted.
+\subsection{h) $\neg$ p $\wedge$ (p $\vee$ $\neg$q)}
+Swimming is not allowed and swimming is allowed or sharks have not been spotted.
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\section{15. Let p, q, and r be the propositions\\
+p : Grizzly bears have been seen in the area.\\
+q : Hiking is safe on the trail.\\
+r : Berries are ripe along the trail.\\
+Write these propositions using p, q, and r and logical connectives (including negations).}
+\subsection{a) Berries are ripe along the trail, but grizzly bears have not been seen in the area.}
+r $\wedge$ $\neg$p
+\subsection{b) Grizzly bears have not been seen in the area and hiking on the trail is safe, but berries are ripe along the trail.}
+$\neg$p $\wedge$ q $\vee$ r
+\subsection{c) If berries are ripe along the trail, hiking is safe if and
+only if grizzly bears have not been seen in the area.}
+r $\rightarrow$ (q $\leftrightarrow$ $\neg$p)
+\subsection{d) It is not safe to hike on the trail, but grizzly bears have not been seen in the area and the berries along the trail
+are ripe.}
+$\neg$q $\wedge$ $\neg$p $\wedge$ r
+\subsection{e) For hiking on the trail to be safe, it is necessary but not
+sufficient that berries not be ripe along the trail and
+for grizzly bears not to have been seen in the area.}
+($\neg$r $\wedge$ $\neg$p) $\rightarrow$ q
+\subsection{f) Hiking is not safe on the trail whenever grizzly bears have been seen in the area and berries are ripe along
+the trail.}
+(p $\wedge$ r) $\rightarrow$ $\neg$q
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\section{23. Write each of these statements in the form \texttt{"}if p, then q\texttt{"} in English. [Hint: Refer to the list of common ways to express conditional statements.]}
+\subsection{a) It snows whenever the wind blows from the northeast.}
+If the wind blows from the northeast, then it snows.
+\subsection{b) The apple trees will bloom if it stays warm for a week.}
+If it stays warm for a week, then the apple trees will bloom.
+\subsection{c) That the Pistons win the championship implies that
+they beat the Lakers.}
+If the Pistons win, then they beat the Lakers.
+\subsection{d) It is necessary to walk 8 miles to get to the top of
+Longs Peak.}
+If you get to top of the Peak, then you walked 8 miles.
+\subsection{e) To get tenure as a professor, it is sufficient to be world-
+famous.}
+If you are world-famous, then you get tenure.
+\subsection{f) If you drive more than 400 miles, you will need to buy
+gasoline.}
+if you dive more than 400 miles, then you will need to buy gasoline.
+\subsection{g) Your guarantee is good only if you bought your CD
+player less than 90 days ago.}
+if your guarantee is good, then you bought your CD player less than 90 days ago.
+\subsection{h) Jan will go swimming unless the water is too cold.}
+If the water is not too cold, then Jan will go swimming. Sure Jan. 
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\section{27. State the converse, contrapositive, and inverse of each of
+these conditional statements.}
+\subsection{a) If it snows today, I will ski tomorrow.}
+Converse: if I will ski tomorrow, then it snows today.\\
+Contrapositive: If I will not ski tomorrow, then it did not snow today.\\
+Inverse: If it does not snow today, then I will not ski tomorrow.
+\subsection{b) I come to class whenever there is going to be a quiz.}
+Converse: if I come to class, then there is going to be a quiz.\\
+Contrapositive: If I do not come to class, then there is not going to be a quiz\\
+Inverse: If there is not going to be a quiz, then I will not come to class.
+\subsection{c) A positive integer is a prime only if it has no divisors
+other than 1 and itself.}
+Converse: If it has no divisors other than 1 and itself, then positive integer is a prime.\\
+Contrapositive: If it has divisors other than 1 and itself, then positive integer is not prime.\\
+Inverse: If a positive integer is not prime, then it has divisors other than 1 and itself.
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\section{30. How many rows appear in a truth table for each of these
+compound propositions?}
+\subsection{a) (q $\rightarrow$ $\neg$p) $\vee$ ($\neg$p $\rightarrow$ $\neg$q)}
+4
+\subsection{b) (p $\vee$ $\neg$t) $\wedge$ (p $\vee$ $\neg$s)}
+8
+\subsection{c) (p $\rightarrow$ r) $\vee$ ($\neg$s $\rightarrow$ $\neg$t) $\vee$ ($\neg$u $\rightarrow$ v)}
+64
+\subsection{d) (p $\wedge$ r $\wedge$ s) $\vee$ (q $\wedge$ t) $\vee$ (r $\wedge$ $\neg$t)}
+32
+
+%----------------------------------------------------------------------------------------
+%------------------------Array_table_for_truth_tables--------------------------
+%\[
+%\begin{array}{C|C|C}
+%$p$ & $\neg$$p$ & $p \rightarrow\neg$p \\
+%\hline
+%T & F & F\\
+%F & T & T \\ [1ex]
+%\end{array}
+%\]
+%----------------------------------------------------------------------------------------
+%-----------------------Tabular-table-for-truth-tables---------------------------
+
+
+\begin{table}[!htp]
+\section{32. Construct a truth table for each of these compound propositions.}
+
+\subsection{a) p $\rightarrow$ $\neg$p}
+\begin{tabular}{c c c}
+\hline\hline
+p & $\neg$p &  p $\rightarrow$ $\neg$p \\ [0.5ex] % inserts table %heading
+\hline
+T & F & F\\
+F & T & T \\ [1ex]
+\hline
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+%----------------------------------------------------------------------------------------
+
+\begin{table}[!htp]
+\subsection{b) p $\leftrightarrow$ $\neg$p}
+\begin{tabular}{c c c}
+\hline\hline
+p & $\neg$p &  p $\leftrightarrow$ $\neg$p \\ [0.5ex] % inserts table %heading
+\hline
+T & F & F\\
+F & T & F \\ [1ex]
+\hline
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+%----------------------------------------------------------------------------------------
+
+\begin{table}[!htp]
+\subsection{c) p $\oplus$ (p  $\vee$ q)}
+\begin{tabular}{c c c c}
+\hline\hline
+p & q &  p  $\vee$ q & p $\oplus$ (p  $\vee$ q) \\ [0.5ex] % inserts table %heading
+\hline
+T & T & T & F\\
+T & F & T & F \\
+F & T & T & T \\
+F & F & F & F\\ [1ex]
+\hline
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+%----------------------------------------------------------------------------------------
+
+\begin{table}[!htp]
+\subsection{d) (p  $\wedge$ q) $\rightarrow$ ( p $\vee$ q)}
+\begin{tabular}{c c c c c}
+\hline\hline
+p & q & p  $\wedge$ q & p $\vee$ q & (p  $\wedge$ q) $\rightarrow$ (p $\vee$ q) \\ [0.5ex] % inserts table %heading
+\hline
+T & T & T & T & T\\
+T & F & F & T & T\\
+F & T & F  & T & T\\
+F & F & F & F & T\\ [1ex]
+\hline
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+%----------------------------------------------------------------------------------------
+
+\begin{table}[!htp]
+\subsection{e) (q $\rightarrow$ $\neg$p) $\leftrightarrow$ (p $\leftrightarrow$ q)}
+\begin{tabular}{c c c c c c}
+\hline\hline
+p & q & $\neg$p & q $\rightarrow$ $\neg$p & p $\leftrightarrow$ q & (q $\rightarrow$ $\neg$p) $\leftrightarrow$ (p $\leftrightarrow$ q) \\ [0.5ex] % inserts table %heading
+\hline
+T & T & F & F & T & F\\
+T & F & F & T & F & F\\
+F & T & T & T & F & F\\
+F & F & T & T & T & T \\ [1ex]
+\hline
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+%----------------------------------------------------------------------------------------
+
+\begin{table}[!htp]
+\subsection{f) (p $\leftrightarrow$ q) $\oplus$ (p $\leftrightarrow$ $\neg$q)}
+\begin{tabular}{c c c c c c}
+\hline\hline
+p & q & $\neg$q & p $\leftrightarrow$ q & p $\leftrightarrow$ $\neg$q & (p $\leftrightarrow$ q) $\oplus$ (p $\leftrightarrow$ $\neg$q) \\ [0.5ex] % inserts table %heading
+\hline
+T & T & F & T & F & T\\
+T & F & T & F & T & T\\
+F & T & F  & F & T & T\\
+F & F & T & T & F & T\\ [1ex]
+\hline
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\section{\textsection1.2 \\
+Translate the given statements into propositional logic.\\
+1. You cannot edit a protected Wikipedia entry unless you are an administrator. Express your answer in terms of \\
+e: You can edit a protected Wikipedia entry.\\
+a: You are an administrator.} 
+General statement is q unless $\neg$p is p $\rightarrow$ q \\
+Reworded original statement is $\neg$e unless a \\
+Original statement can be written as $\neg$a  $\rightarrow$ $\neg$e \\
+In other words, if you are not an administrator, then you can not edit the protected Wiki entry.
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\section{3. You can graduate only if you have completed the requirements of your major and you do not owe money to the university and you do not have an overdue library book. Express your answer in terms of \\
+g: You can graduate. \\
+m: You owe money to the university. \\
+r: You have completed the requirements of your major. \\
+b: You have an overdue library book.} 
+Only if statements translate as, p only if q. p $\rightarrow$ q \\
+In this case p is g.\\
+q is r  $\wedge$ $\neg$ m  $\wedge$ $\neg$ b \\
+so original statement can be written g $\rightarrow$ (r  $\wedge$ $\neg$ m  $\wedge$ $\neg$ b)
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\section{5. You are eligible to be President of the U.S.A. only if you are at least 35 years old, were born in the U.S.A, or at the time of your birth both of your parents were citizens, and you have lived at least 14 years in the country. Express your answer in terms of \\
+e: You are eligible to be President of the U.S.A. \\
+a: You are at least 35 years old.\\
+b: You were born in the U.S.A. \\
+p: At the time of your birth, both of your parents where citizens. \\
+r: You have lived at least 14 years in the U.S.A.}
+e only if a and (b or (p and r))\\
+p only if q is p $\rightarrow$ q \\
+So statement can be written e $\rightarrow$ (a  $\wedge$ (b $\vee$ (p $\wedge$ r))
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\section{7. Express these system specifications using these propositions together with logical connectives (including negations). \\
+p: The message is scanned for viruses. \\
+q: The message was sent from an unknown system.}
+\subsection{a) The message is scanned for viruses whenever the message was sent from an unknown system.}
+In general, q whenever p is same as p $\rightarrow$ q.\\
+In our terminology, it can be written q $\rightarrow$ p. \\
+If the message was sent from an unknown system, then the message is scanned for viruses.
+\subsection{b) The message was sent from an unknown system but it was not scanned for viruses.}
+Can be written q $\wedge$ $\neg$p. \\
+The message was sent from an unknown system and not scanned for viruses.
+\subsection{c) It is necessary to scan the message for viruses whenever it was sent from an unknown system.}
+In general, q is necessary for p is simplified to if p then q. \\
+Original statement can be written q $\rightarrow$ p. \\
+If the message was sent from an unknown system, then the message is scanned for viruses.
+\subsection{d) When a message is not sent from an unknown system it is not scanned for viruses.}
+General form: when not p, not q equivalent to $\neg$p $\rightarrow$ $\neg$q \\
+In our terms of this problem, $\neg$q $\rightarrow$ $\neg$p.\\
+If a message is not sent from an unknown system, then it is not scanned.\\
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\section{\textsection1.3}
+\begin{table}[!htp]
+\section{2. Show that $\neg$($\neg$$p$) and $p$ are logically equivalent.}
+\begin{tabular}{c c c}
+\hline\hline
+p & $\neg$p &  $\neg$($\neg$p) \\ [0.5ex] % inserts table %heading
+\hline
+T & F & T\\
+F & T & F \\ [1ex]
+\hline
+\end{tabular}
+$\quad$The table shows $\neg$($\neg$p) $\equiv$ p \\
+\\
+Example of law of double negation.
+\label{table:nonlin}
+\end{table}
+%----------------------------------------------------------------------------------------
+
+\section{7. Use De Morgan$'$s laws to find the negation of each of the following statements.}
+\subsection{a) Jan is rich and happy. p: is rich, q: is happy.}
+First De'Morgan Law of negation: $\neg$(p $\wedge$ q) $\equiv$ $\neg$p $\vee$ $\neg$q\\
+Negation of statement (p and q) is logically equivalent to not p or not q. \\
+Negation of Jan is rich and happy is Jan is not rich or not happy.
+
+\subsection{b) Carlos will bicycle or run tomorrow.}
+The second De'Morgan Law of negation: $\neg$(p $\vee$ q) $\equiv$ $\neg$p $\wedge$ $\neg$q \\
+Negation of Carlos will bicycle or run tomorrow is Carlos will not bicycle and will not run tomorrow.
+
+\subsection{c) Mei walks or takes the bus to class.}
+Mei does not take the bus to class and does not walk to class.
+
+\subsection{d) Ibrahim is smart and hard working.}
+Ibrahim is not smart or not hard working.
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\begin{table}[!htp]
+\section{9. Show that each of these conditional statements is a tautology by using truth tables.}
+\subsection{a) (p $\wedge$ q) $\rightarrow$ p}
+\begin{tabular}{c c c c}
+\hline\hline
+p & q & p $\wedge$ q & (p $\wedge$ q) $\rightarrow$ p \\ [0.5ex] % inserts table %heading
+\hline
+T & T & T & T\\
+T & F & F & T\\
+F & T & F & T\\
+F & F & F & T\\ [1ex]
+\hline
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+
+\begin{table}[!htp]
+\subsection{d) (p $\wedge$ q) $\rightarrow$ (p  $\rightarrow$ q)}
+\begin{tabular}{c c c c c}
+\hline\hline
+p & q & p $\wedge$ q & p $\rightarrow$ q & (p $\wedge$ q) $\rightarrow$ (p  $\rightarrow$ q) \\ [0.5ex] % inserts table %heading
+\hline
+T & T & T & T & T\\
+T & F & F & F & T\\
+F & T & F & T & T\\
+F & F & F & T & T\\ [1ex]
+\hline
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+
+\begin{table}[!htp]
+\subsection{f) $\neg$(p $\rightarrow$ q) $\rightarrow$ $\neg$q}
+\begin{tabular}{c c c c c c}
+\hline\hline
+p & q & $\neg$q & p $\rightarrow$ q & $\neg$(p $\rightarrow$ q) & $\neg$(p $\rightarrow$ q) $\rightarrow$ $\neg$q\\ [0.5ex] % inserts table %heading
+\hline
+T & T & F & T & F & T\\
+T & F & T & F & T & T\\
+F & T & F & T & F & T\\
+F & F & T & T & F & T\\ [1ex]
+\hline
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\begin{table}[!htp]
+\section{15. Determine whether ($\neg$$q$ $\wedge$ ($p$ $\rightarrow$ $q$)) $\rightarrow$ $\neg$$p$ is a tautology.}
+\begin{tabular}{c c c c c c c}
+\hline\hline
+p & q & $\neg$q & p $\rightarrow$ q & $\neg$q $\wedge$ (p $\rightarrow$ q) & $\neg$p & $\neg$q $\wedge$ (p $\rightarrow$ q)) $\rightarrow$ $\neg$p\\ [0.5ex] % inserts table %heading
+\hline
+T & T & F & T & F & F & T\\
+T & F & T & F & F & F & T\\
+F & T & F & T & F & T & T\\
+F & F & T & T & T & T & T\\ [1ex]
+\hline
+\end{tabular}
+\\\\
+Compound statement $\neg$$q$ $\wedge$ $(p$ $\rightarrow$ $q$)) $\rightarrow$ $\neg$$p$ is a tautology. \\
+\label{table:nonlin}
+\end{table}
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+
+\begin{table}[!htp]
+\section{17. Show that $\neg$($p$ $\leftrightarrow$ $q$) and $p$ $\leftrightarrow$ $\neg$$q$ are logically equivalent.}
+\subsection{$\neg$(p $\leftrightarrow$ q)}
+\begin{tabular}{c c c c}
+\hline\hline
+p & q & p $\leftrightarrow$ q & $\neg$(p $\leftrightarrow$ q) \\ [0.5ex] % inserts table %heading
+\hline
+T & T & T & F\\
+T & F & F & T\\
+F & T & F & T\\
+F & F & T & F\\ [1ex]
+\hline
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+
+\begin{table}[!htp]
+\subsection{p $\leftrightarrow$ $\neg$q}
+\begin{tabular}{c c c c}
+\hline\hline
+p & q & $\neg$q & p $\leftrightarrow$ $\neg$q \\ [0.5ex] % inserts table %heading
+\hline
+T & T & F & F\\
+T & F & T & T\\
+F & T & F & T\\
+F & F & T & F\\ [1ex]
+\hline
+\end{tabular}
+\label{table:nonlin}
+\subsection{$\neg$(p $\leftrightarrow$ q) $\equiv$ p $\leftrightarrow$ $\neg$q}
+\end{table}
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\begin{table}[!htp]
+\section{19. Show that $\neg$$p$ $\leftrightarrow$ $q$ and $p$ $\leftrightarrow$ $\neg$$q$ are logically equivalent.}
+\subsection{$\neg$p $\leftrightarrow$ q}
+\begin{tabular}{c c c c}
+\hline\hline
+p & q & $\neg$p & $\neg$p $\leftrightarrow$ q \\ [0.5ex] % inserts table %heading
+\hline
+T & T & F & F\\
+T & F & F & T\\
+F & T & T & T\\
+F & F & T & F\\ [1ex]
+\hline
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+
+\begin{table}[!htp]
+\subsection{p $\leftrightarrow$ $\neg$q}
+\begin{tabular}{c c c c}
+\hline\hline
+p & q & $\neg$q & p $\leftrightarrow$ $\neg$q \\ [0.5ex] % inserts table %heading
+\hline
+T & T & F & F\\
+T & F & T & T\\
+F & T & F & T\\
+F & F & T & F\\ [1ex]
+\hline
+\end{tabular}
+\label{table:nonlin}
+\subsection{$\neg$p $\leftrightarrow$ q $\equiv$ p $\leftrightarrow$ $\neg$q}
+\end{table}
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\begin{table}[!htp]
+\section{23. Show that ($p$ $\rightarrow$ $r$) $\wedge$ ($q$ $\rightarrow$ $r$) and ($p$ $\vee$ $q$) $\rightarrow$ $r$ are logically equivalent.}
+\subsection{(p $\rightarrow$ r) $\wedge$ (q $\rightarrow$ r)}
+\begin{tabular}{c c c c c c}
+\hline\hline
+p & q & r & p $\rightarrow$ r & q $\rightarrow$ r & (p $\rightarrow$ r) $\wedge$ (q $\rightarrow$ r)\\ [0.5ex] % inserts table %heading
+\hline
+T & T & T & T & T & T\\
+T & T & F & F & F & F\\
+T & F & T & T & T & T\\
+T & F & F & F & T & F\\
+F & T & T & T & T & T\\
+F & T & F & T & F & F\\
+F & F & T & T & T & T\\
+F & F & F & T & T & T\\ [1ex]
+\hline
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+
+\begin{table}[!htp]
+\subsection{(p $\vee$ q) $\rightarrow$ r}
+\begin{tabular}{c c c c c}
+\hline\hline
+p & q & r & p $\vee$ q & (p $\vee$ q) $\rightarrow$ r \\ [0.5ex] % inserts table %heading
+\hline
+T & T & T & T & T\\
+T & T & F & T & F\\
+T & F & T & T & T\\
+T & F & F & T & F\\
+F & T & T & T & T\\
+F & T & F & T & F\\
+F & F & T & F & T\\
+F & F & F & F & T\\ [1ex]
+\hline
+\end{tabular}
+\label{table:nonlin}
+\subsection{(p $\rightarrow$ r) $\wedge$ (q $\rightarrow$ r) $\equiv$ (p $\vee$ q) $\rightarrow$ r}
+\end{table}
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\begin{table}[!htp]
+\section{\textsection1.4}
+\section{3. Let $Q(x, y)$ denote the statement $x$ is the capital of $y$. What are these truth values?}
+\subsection{a) $Q(Denver, Colorado)$}
+True
+\subsection{b) $Q(Detroit, Michigan)$}
+False
+\subsection{c) $Q(Massachusetts, Boston)$}
+True
+\subsection{d) $Q(New$ $York, New$ $York)$}
+False
+\end{table}
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\begin{table}[!htp]
+\section{7. Translate these statements into English, where $C(x)$ is $\texttt{"}$x is a comedian$\texttt{"}$ and $F(x)$ is $\texttt{"}$x is funny$\texttt{"}$ and the domain consists of all people.}
+\subsection{a) $\forall$$x(C(x) \rightarrow F(x))$}
+For all people, if one is a comedian, then one is funny.
+\subsection{b) $\forall$$x(C(x) \wedge F(x))$}
+For all people, one is a comedian and funny.
+\subsection{c) $\exists$$x(C(x) \rightarrow F(x))$}
+There exists at least one person such that if they are a comedian, then they are funny.
+\subsection{d) $\exists$$x(C(x) \wedge F(x))$}There exists at least one person such that they are a comedian and they are funny.
+\end{table}
+
+\begin{table}[!htp]
+\section{11. Let $P(x)$ be the statement ${x = x^2}$. If the domain consists of the integers, what are these truth values?}
+\subsection{a) $P(0)$}
+True
+\subsection{b) $P(1)$}
+True
+\subsection{c) $P(2)$}
+False
+\subsection{d) $P(-1)$}
+False
+\subsection{e) $\exists$$xP(x)$}
+True
+\subsection{f) $\forall$$xP(x)$}
+False
+
+\end{table}
+%----------------------------------------------------------------------------------------
+\begin{table}[!htp]
+\section{15. Determine the truth value of each of these statements if the domain for all variables consists of all integers.}
+\subsection{a) $\forall$$n(n^2 \geq 0)$}
+\subsection{b) $\exists$$n(n^2 = 2)$}
+\subsection{c) $\forall$$n(n^2 \geq n)$}
+\subsection{d) $\exists$$n(n^2 \textless 0)$}\end{table}
+%----------------------------------------------------------------------------------------
+
+\end{document}
