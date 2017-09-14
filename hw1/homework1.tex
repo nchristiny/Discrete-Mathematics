@@ -24,8 +24,8 @@
 
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 %\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
-\usepackage{fontspec}
-    \setmainfont{Brill} % Using Brill http://www.brill.com/about/brill-fonts requires lualatex
+%\usepackage{fontspec}
+%	\setmainfont{Brill} % Using Brill http://www.brill.com/about/brill-fonts requires lualatex
 \usepackage[english]{babel} % English language/hyphenation
 \usepackage{amsmath,amsfonts,amsthm,geometry,amssymb} % Math packages
 
@@ -673,5 +673,48 @@ But 1 is a real number, therefore statement is false.
 \subsubsection{If Socrates is human, then Socrates is mortal. \\
 Socrates is human.\\
 $\therefore$ Socrates is mortal.}
+Let p be the proposition "Socrates is human". Let q be the proposition "Socrates is mortal". \\
+The first premise of the argument is p $\rightarrow$ q and p is the second premise. \\
+It follows from \textbf{modus ponens} that the argument is valid, because (p $\wedge$ (p $\rightarrow$ q)) $\rightarrow$ q is a tautology. We can then say the conclusion q "Socrates is mortal," is true if the premises are true.
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{3. What rule of inference is used in each of these arguments?}
+\subsubsection{a) Alice is a mathematics major. Therefore, Alice is either a mathematics major or a computer science major.}
+Addition rule. 
+\subsubsection{b) Jerry is a mathematics major and a computer sciencemajor. Therefore, Jerry is a mathematics major.}
+Simplification rule.
+\subsubsection{c) If it is rainy, then the pool will be closed. It is rainy.Therefore, the pool is closed.}
+Modus ponens rule.
+\subsubsection{d) If it snows today, the university will close. The university is not closed today. Therefore, it did not snow today.}
+Modus tollens rule.
+\subsubsection{e) If I go swimming, then I will stay in the sun too long.If I stay in the sun too long, then I will sunburn. Therefore, if I go swimming, then I will sunburn.}
+Hypothetical syllogism rule.
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{7. What rules of inference are used in this famous argument? $"$All men are mortal. Socrates is a man. Therefore, Socrates is mortal.$"$}
+Combination of universal instantiation and modus ponens, or \textbf{universal modus ponens}: \\
+Premise: P(x) = "x is a man," and Q(x) = "x is a mortal" \\
+$\forall$x(P(x) $\rightarrow$ Q(x)) states all men are mortal. \\
+P(Socrates) $\rightarrow$ Q(Socrates) is true by universal instantiation. \\
+P(Socrates) is true, because of the second premise: Socrates is a member of the domain of all men. \\
+Therefore by modus ponens Q(Socrates) is true as well: Socrates is a mortal. 
+
+%----------------------------------------------------------------------------------------
+
+\subsection{19. Determine whether each of these arguments is valid. If an argument is correct, what rule of inference is being used? If it is not, what logical error occurs?}
+\subsubsection{a) If $n$ is a real number such that $n \textgreater 1$, then $n^2 > 1$.\\
+Suppose that $n^2 > 1$. Then $n > 1$.}
+\subsubsection{b) If $n$ is a real number with $n>3$, then $n^2 > 9$.\\
+Suppose that $n^2 \leq 9$. Then $n \leq 3$.}
+\subsubsection{c) If $n$ is a real number with $n>2$, then $n^2 > 4$. \\Suppose that $n \leq 2$. Then $n^2 \leq 4$.}
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+
 
 \end{document}
