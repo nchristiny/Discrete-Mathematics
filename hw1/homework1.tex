@@ -683,15 +683,17 @@ It follows from \textbf{modus ponens} that the argument is valid, because (p $\w
 \subsection{3. What rule of inference is used in each of these arguments?}
 \subsubsection{a) Alice is a mathematics major. Therefore, Alice is either a mathematics major or a computer science major.}
 Addition rule. 
-\subsubsection{b) Jerry is a mathematics major and a computer sciencemajor. Therefore, Jerry is a mathematics major.}
+\subsubsection{b) Jerry is a mathematics major and a computer science
+major. Therefore, Jerry is a mathematics major.}
 Simplification rule.
-\subsubsection{c) If it is rainy, then the pool will be closed. It is rainy.Therefore, the pool is closed.}
+\subsubsection{c) If it is rainy, then the pool will be closed. It is rainy.
+Therefore, the pool is closed.}
 Modus ponens rule.
 \subsubsection{d) If it snows today, the university will close. The university is not closed today. Therefore, it did not snow today.}
 Modus tollens rule.
-\subsubsection{e) If I go swimming, then I will stay in the sun too long.If I stay in the sun too long, then I will sunburn. Therefore, if I go swimming, then I will sunburn.}
+\subsubsection{e) If I go swimming, then I will stay in the sun too long.
+If I stay in the sun too long, then I will sunburn. Therefore, if I go swimming, then I will sunburn.}
 Hypothetical syllogism rule.
-%----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
 
@@ -708,13 +710,60 @@ Therefore by modus ponens Q(Socrates) is true as well: Socrates is a mortal.
 \subsection{19. Determine whether each of these arguments is valid. If an argument is correct, what rule of inference is being used? If it is not, what logical error occurs?}
 \subsubsection{a) If $n$ is a real number such that $n \textgreater 1$, then $n^2 > 1$.\\
 Suppose that $n^2 > 1$. Then $n > 1$.}
+Valid. Modus ponens.
 \subsubsection{b) If $n$ is a real number with $n>3$, then $n^2 > 9$.\\
 Suppose that $n^2 \leq 9$. Then $n \leq 3$.}
-\subsubsection{c) If $n$ is a real number with $n>2$, then $n^2 > 4$. \\Suppose that $n \leq 2$. Then $n^2 \leq 4$.}
+Valid. Hypothetical Syllogism.
+\subsubsection{c) If $n$ is a real number with $n>2$, then $n^2 > 4$. \\
+Suppose that $n \leq 2$. Then $n^2 \leq 4$.}
+Invalid. The hypothesis that states $n>2$ is contradicted in the line "Suppose $n \leq 2$". In this case it appears to be a fallacy of denying the hypothesis.
 %----------------------------------------------------------------------------------------
 
 %----------------------------------------------------------------------------------------
 
+\section{\textsection1.7}
+\subsection{1. Use a direct proof to show that the sum of two odd integers is even.}
+Assume m and n are odd integers, and assume that the hypothesis is true, that all odd integer sums are even.\\
+It follows that $n = 2k + 1$, as well as $m = 2j + 1$, here $k$ and $j$ is some integer. \\
+We wish to show that $m + n$ is even. \\
+$m + n = 2k + 2j + 2$ \\
+$m + n = 2(k + j + 1)$ \\
+We can say the parenthesis is equivalent to some other integer, k: \\
+$m + n = 2k$ \\
+Which is the definition of even numbers.
 
+%----------------------------------------------------------------------------------------
 
+\subsubsection{3. Show that the square of an even number is an even number using a direct proof.}
+Assume that for even integer $n$, $n^2$ is even. \\  
+Since even integer $n$ can be expressed as $2k$ where $k$ is some integer, then \\
+$n^2 =(2k)^2 = 4k^2 = 2(2k^2) $ \\
+By definition of even integer, $n^2$ is even, because it is twice an integer amount. Therefore if $n$ is even, $n^2$ is as well. 
+
+\subsection{5. Prove that if m + n and n + p are even integers, where m, n, and p are integers, then m + p is even. What kind of proof did you use?}
+Assume $m + n$ and $n + p$ are even integers. \\
+$m + n = 2k$\\
+So, $n = 2k - m$\\
+and \\
+$n + p = 2k$\\
+$(2k - m) + p = 2k$\\
+$2k - m = 2k - p$\\
+$-m = -p$ \\
+$m = p$, so\\
+$m + p = 2k$ is twice some integer k, which proves it is even. \\
+Trying contraposition:\\
+Assume that if m + p is odd then m + n and n + p are odd.
+Then, \\
+$m + p = 2k + 1$\\ 
+$m = 2k + 1 - p$\\ 
+Plug this value for $m$ into $m + n$ \\
+$(2k + 1 - p) + n = 2t + 1$ where t is some integer. \\
+$-p  + n =2t - 2k$\\
+$-p  + n =2(t - k)$\\
+$ n = 2(t - k) + p$\\
+Plug this into $n + p = 2s + 1$, where s is some integer. \\
+$2(t - k) + p + p = 2s + 1$\\
+$2t - 2k + 2p = 2s + 1$\\
+$2p= 2s-2t+2k +1 $\\
+$ p = 2(some integer) + 0.5$\\ is false statement, p cannot be odd. It is even. So 
 \end{document}
