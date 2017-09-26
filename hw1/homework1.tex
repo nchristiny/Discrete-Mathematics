@@ -739,31 +739,59 @@ Assume that for even integer $n$, $n^2$ is even. \\
 Since even integer $n$ can be expressed as $2k$ where $k$ is some integer, then \\
 $n^2 =(2k)^2 = 4k^2 = 2(2k^2) $ \\
 By definition of even integer, $n^2$ is even, because it is twice an integer amount. Therefore if $n$ is even, $n^2$ is as well. 
+%----------------------------------------------------------------------------------------
 
-\subsection{5. Prove that if m + n and n + p are even integers, where m, n, and p are integers, then m + p is even. What kind of proof did you use?}
+\subsection{5. Prove that if $m + n$ and $n + p$ are even integers, where $m$, $n$, and $p$ are integers, then $m + p$ is even. What kind of proof did you use?}
+Direct proof: \\
 Assume $m + n$ and $n + p$ are even integers. \\
-$m + n = 2k$\\
-So, $n = 2k - m$\\
-and \\
-$n + p = 2k$\\
-$(2k - m) + p = 2k$\\
-$2k - m = 2k - p$\\
-$-m = -p$ \\
-$m = p$, so\\
-$m + p = 2k$ is twice some integer k, which proves it is even. \\
-Trying contraposition:\\
-Assume that if m + p is odd then m + n and n + p are odd.
-Then, \\
-$m + p = 2k + 1$\\ 
-$m = 2k + 1 - p$\\ 
-Plug this value for $m$ into $m + n$ \\
-$(2k + 1 - p) + n = 2t + 1$ where t is some integer. \\
-$-p  + n =2t - 2k$\\
-$-p  + n =2(t - k)$\\
-$ n = 2(t - k) + p$\\
-Plug this into $n + p = 2s + 1$, where s is some integer. \\
-$2(t - k) + p + p = 2s + 1$\\
-$2t - 2k + 2p = 2s + 1$\\
-$2p= 2s-2t+2k +1 $\\
-$ p = 2(some integer) + 0.5$\\ is false statement, p cannot be odd. It is even. So 
+So, $m + n = 2s$ and $n + p = 2t$ where $s$ and $t$ are integers.\\
+Adding these two gives: $m + p + 2n = 2s + 2t$ \\
+Simplifies to $m + p = 2(s + t - n)$ which is twice some integer, therefore $m + p$ is even. 
+%----------------------------------------------------------------------------------------
+
+\subsubsection{8. Prove that if $n$ is a perfect square, then $n+2$ is not a perfect square.}
+Direct proof: \\
+Assume $n$ is perfect square.\\
+...
+%TODO
+%----------------------------------------------------------------------------------------
+
+\subsubsection{9. Use a proof by contradiction to prove that the sum of an irrational number and a rational number is irrational.}
+If $r$ is rational and $i$ is irrational, then $r = p/q$, where q is not equal to 0. \\
+Assume the contradiction that $r + i = s$, where s is rational.\\
+Then, $s + (-r) =i$ is stated by Example 7 in text to be rational. (Sum of two rational numbers is rational.) \\
+But this is a contradiction since $i$ is supposed to be irrational. Therefore it is contradiction that proves sum of an irrational number and rational number is irrational.\\
+%----------------------------------------------------------------------------------------
+
+\subsubsection{15. Use a proof by contraposition to show that if $x + y \geq 2$, where $x$ and $y$ are real numbers, then $x\geq1$ or $y\geq1$.}
+Proof by contraposition: We assume $x\textless1$ and $y\textless1$. \\
+We get $x + y \textless 2$, which is opposite or negation of hypothesis. Therefore we prove the original statement. 
+%----------------------------------------------------------------------------------------
+
+\subsubsection{17. Show that if $n$ is an integer and $n^3+5$ is odd, then $n$ is even using}
+\subsubsection{a) a proof by contraposition.}
+Assume $n$ is odd, so $n=2k+1$ for some integer k.\\
+$(2k+1)^3 + 5 = (2k+1)(2k+1)(2k+1) + 5 = (4k^2+4k+1)(2k+1) +5 = 8k^3 + 12k^2 + 6k + 1 + 5 = 2(4k^3+6k^2+3k + 3)$, which is two times some integer, so $n^3+5$ must be even, which is opposite of our original statement so $n$ must be even.
+%----------------------------------------------------------------------------------------
+
+\subsubsection{b) a proof by contradiction.}
+When we assume both $n^3 +5$ and $n$ are odd, therefore due to previous proof we know product of two odd numbers is odd, which means $n^3$ is odd.\\
+...
+%----------------------------------------------------------------------------------------
+\subsubsection{27. Prove that if $n$ is a positive integer, then $n$ is odd if and only if $5n + 6$ is odd.}
+Must verify both directions for biconditional. \\
+Assume $n$ is odd.\\
+$5(2k+1) + 6 = 10k + 11 = 2(5k+5)+1$, therefore $5n + 6$ is odd.\\
+To prove the conditional in the opposite direction, assume $n$ is even.\\
+$5(2k)+ 6 = 10k + 6 = 2(5k +3)$, which makes $5n+6$ even. Therefore, $n$ is odd iff $5n+6$ is odd.
+%----------------------------------------------------------------------------------------
+
+\subsubsection{31. Show that these statements about the integer $x$ are equivalent: \\
+(i) $3x+2$ is even,\\
+(ii) $x+5$ is odd,\\
+(iii) $x^2$ is even.}
+Direct proof: assume $x$ is even, $x= 2k$ for some integer $k$. (i) $3(2k)+2 = 6k + 2 = 2(3k+1)$, which is even. (ii) $2k + 5 = 2k + 4 + 1 = 2(k+2) +1$, so $x+5$ is odd. (iii) $x^2 = 4k^2=2(2k^2)$, means $x^2$ is even.\\
+Indirect proof by contraposition: Assume $x$ is odd. (i) $3(2k+1)+2=6k+5=2(3k+2)+1$, which is odd. (ii) $x+5 =2k+1+5=2(k+3)$, so $x+5$ is even. And finally $x^2$ is odd, when $x$ is odd, proved previously.
+%----------------------------------------------------------------------------------------
+
 \end{document}
