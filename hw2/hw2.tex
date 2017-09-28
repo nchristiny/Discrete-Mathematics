@@ -1,15 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Short Sectioned Assignment
+% Sectioned Assignment
 % LaTeX Template
-% Version 1.0 (5/5/12)
+% Version 2.0 (Sept. 26 2017)
 %
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
+% Heavily modified for use by:
+% Nicholas Christiny (http://nchristiny.com/)
 % Original author:
 % Frits Wenneker (http://www.howtotex.com)
-% Heavily modified by:
-% Nicholas Christiny (http://nchristiny.com/)
 %
 % License:
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
@@ -24,8 +21,8 @@
 
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 %\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
-\usepackage{fontspec}
-	\setmainfont{Brill} % Using Brill http://www.brill.com/about/brill-fonts requires lualatex
+%\usepackage{fontspec}
+%\setmainfont{Brill} % Using Brill http://www.brill.com/about/brill-fonts !!requires LuaTeX!! for error "cannot-use-pdftex", make sure to use LuaTeX (or XeTeX)
 \usepackage[english]{babel} % English language/hyphenation
 \usepackage{amsmath,amsfonts,amsthm,geometry,amssymb} % Math packages
 
@@ -35,7 +32,7 @@
 \usepackage{fancyhdr} % Custom headers and footers
 \pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
 \fancyhead{} % No page header - if you want one, create it in the same way as the footers below
-\fancyfoot[L]{{\footnotesize{Math146 HW1}}} % Empty left footer
+\fancyfoot[L]{{\footnotesize{Math146 HW2}}} % Empty left footer
 \fancyfoot[C]{} % Empty center footer
 \fancyfoot[R]{Page \thepage} % Page numbering for right footer
 \renewcommand{\headrulewidth}{0pt} % Remove header underlines
@@ -56,7 +53,7 @@
 
 \title{	
 \normalfont \normalsize 
-\textsc{Daley College, Fall 2017} \\ [25pt] % Your university, school and/or department name(s)
+\textsc{Wilbur Wright College, Fall 2017} \\ [25pt] % Your university, school and/or department name(s)
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
 \huge Discrete Mathematics Homework II \\
 \huge Set Theory, Functions, Algorithms, and Integer Representations \\ % The assignment title
@@ -70,6 +67,146 @@
 
 \maketitle % Print the title
 
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\section{\textsection2.1 Sets}
+\subsection{1. List the members of these sets.}
+\subsubsection{a) $\{x| x$ is a real number such that $x^2 =1\}$}
+Will show the list of members as a set. \\
+$\{1, -1\}$
+\subsubsection{b) $\{x | x$ is a positive integer less than $12\}$}
+$\{1,2,3,4,5,6,7,8,9,10,11\}$
+\subsubsection{c) $\{x|x$ is the square of an integer and $x<100\}$}
+$\{1,4,9,16,25,36,49,64,81\}$
+\subsubsection{d) $\{x|x$ is an integer such that $x^2 =2\}$}
+No members. $\{\}$ or $\emptyset$
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\subsection{3. For each of these pairs of sets, determine whether the first is a subset of the second, the second is a subset of the first, or neither is a subset of the other.}
+\subsubsection{a) the set of airline flights from New York to New Delhi,\\the set of nonstop airline flights from New York to New Delhi}
+If all airline flights from New York to New Delhi are non-stop, both sets would be equal meaning both would be subsets of each other. However, in the reasonable case that not all flights are nonstop, the second set is a subset of the first and first is not subset of second.
+\subsubsection{b) the set of people who speak English, the set of people who speak Chinese}
+Neither set is subset of the other.
+\subsubsection{c) the set of flying squirrels, the set of living creatures that can fly}
+First is subset of second. Second is not subset of first.
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{5. Determine whether each of these pairs of sets are equal.}
+\subsubsection{a) $\{1,3,3,3,5,5,5,5,5\},\{5,3,1\}$}
+Equal
+\subsubsection{b) $\{\{1\}\},\{1,\{1\}\}$}
+Not equal
+\subsubsection{c) $\emptyset,\{\emptyset\}$}
+Not equal, first is empty set, second is singleton set containing an empty set.
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{7. For each of the following sets, determine whether 2 is an element of that set.}
+\subsubsection{a) $\{x \in \mathbb{R}|x$ is an integer greater than $1\}$}
+Yes, 2 is an element of this set.
+\subsubsection{b) $\{x \in \mathbb{R}|x$ is the square of an integer$\}$}
+No, this set does not contain 2.
+\subsubsection{c) $\{2,\{2\}\}$}
+Yes.
+\subsubsection{d) $\{\{2\},\{\{2\}\}\}$}
+No.
+\subsubsection{e) $\{\{2\},\{2,\{2\}\}\}$}
+No.
+\subsubsection{f ) $\{\{\{2\}\}\}$}
+No.
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{9. Determine whether each of these statements is true or false.}
+\subsubsection{a) $0\in\emptyset$}
+False
+\subsubsection{b) $\emptyset\in\{0\}$}
+False
+\subsubsection{c) $\{0\}\subset\emptyset$}
+False
+\subsubsection{d) $\emptyset\subset\{0\}$}
+False
+\subsubsection{e) $\{0\}\in\{0\}$}
+True
+\subsubsection{f) $\{0\}\subset\{0\}$}
+False
+\subsubsection{g) $\{\emptyset\}\subseteq\{\emptyset\}$}
+True
+
+%----------------------------------------------------------------------------------------
+
+\subsection{11. Determine whether each of these statements is true or false.}
+\subsubsection{a) $x\in\{x\}$}
+True
+\subsubsection{b) $\{x\}\subseteq\{x\}$}
+True
+\subsubsection{c) $\{x\}\in\{x\}$}
+False
+\subsubsection{d) $\{x\}\in\{\{x\}\}$}
+True
+\subsubsection{e) $\emptyset\subseteq\{x\}$}
+False
+\subsubsection{f) $\emptyset\in\{x\}$}
+False
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{17. Suppose that A, B, and C are sets such that $A \subseteq B$ and $B \subseteq C$. Show that $A \subseteq C$.}
+Say set A = \{1, 2\} and set B = \{1, 2, 3\}, where A $\subseteq$ B.\\
+Then, set C = \{1, 2, 3, 4, 5, 6\}, such that B $\subseteq$ C.\\
+$\therefore$ since \{1, 2\} $\subseteq$ \{1, 2, 3, 4, 5, 6\}, we see A $\subseteq$ C.
+ %----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{19. What is the cardinality of each of these sets?}
+\subsubsection{a) $\{a\}$}
+1
+\subsubsection{b) $\{\{a\}\}$}
+1
+\subsubsection{c) $\{a, \{a\}\}$}
+2
+\subsubsection{d) $\{a, \{a\}, \{a, \{a\}\}\}$}
+3
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{21. Find the power set of each of these sets, where $a$ and $b$ are distinct elements.}
+\subsubsection{a) $\{a\}$}
+Itself, $\{a\}$
+\subsubsection{b) $\{a,b\}$}
+$\{a, \{a, b\}\}$
+\subsubsection{c) $\{\emptyset,\{\emptyset\}\}$}
+$\{\emptyset, \{\emptyset, \{\emptyset\}\}\}$
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\subsection{25. Prove that $\mathcal{P}(A)\subseteq\mathcal{P}(B)$ if and only if $A\subseteq B$.}
+...
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{32. Let $A = \{a,b,c\}$, $B = \{x,y\}$, and $C = \{0,1\}$. Find}
+\subsubsection{a) $A \times B \times C$}
+$A \times B = \{ (a, x), (a, y), (b, x), (b, y) \}$ \\
+$A \times B \times C = \{ ((a, x), 0), ((a, x), 1), ((a, y), 0), ((a, y), 1), ((b, x), 0), ((b, x), 1) \}$\\
+...
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{41. Translate each of these quantifications into English and determine its truth value.}
+\subsubsection{a) $\forall x \in \mathbb{R} (x^2 \neq -1)$}
+For all x in domain of real numbers, x squared is not equal to negative one. True
+\subsubsection{b) $\exists x \in \mathbb{Z} (x^2 = 2)$}
+There exists in domain of integers x, such that x squared is two. False
+\subsubsection{c) $\forall x \in \mathbb{Z} (x^2 \textgreater 0)$}
+For all x in domain of integers, x squared is greater than zero. True
+\subsubsection{d) $\exists x \in \mathbb{R} (x^2 = x)$}
+There exists in domain of real numbers x, such that x squared equals x. True, $1$ satisfies.
 %----------------------------------------------------------------------------------------
 
 
