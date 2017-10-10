@@ -20,10 +20,9 @@
 \documentclass[11pt, oneside]{article} % A4 paper and 11pt font size
 
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
-%\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
-\usepackage{fontspec}
-\setmainfont{Brill} % Using Brill http://www.brill.com/about/brill-fonts !!requires LuaTeX!! for error "cannot-use-pdftex", make sure to use LuaTeX (or XeTeX)
-
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+%\usepackage{fontspec}
+%\setmainfont{Brill} % Using Brill http://www.brill.com/about/brill-fonts !!requires LuaTeX!! for error "cannot-use-pdftex", make sure to use LuaTeX (or XeTeX)
 \usepackage[english]{babel} % English language/hyphenation
 \usepackage{amsmath,amsfonts,amsthm,geometry,amssymb} % Math packages
 
@@ -33,7 +32,7 @@
 \usepackage{fancyhdr} % Custom headers and footers
 \pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
 \fancyhead{} % No page header - if you want one, create it in the same way as the footers below
-\fancyfoot[L]{{\footnotesize{Class/Assign.}}} % Empty left footer
+\fancyfoot[L]{{\footnotesize{Math146 HW2}}} % Empty left footer
 \fancyfoot[C]{} % Empty center footer
 \fancyfoot[R]{Page \thepage} % Page numbering for right footer
 \renewcommand{\headrulewidth}{0pt} % Remove header underlines
@@ -52,15 +51,16 @@
 
 \newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
 
-\title{	
-\normalfont \normalsize 
-\textsc{Academy, institution, dept} \\ [25pt] % Your university, school and/or department name(s)
+\title{
+\normalfont \normalsize
+\textsc{Wilbur Wright College, Fall 2017} \\ [25pt] % Your university, school and/or department name(s)
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-\huge TITLE\\ % The assignment title
+\huge Discrete Mathematics Homework III \\
+\huge Mathematical Induction and Combinations \\ % The assignment title
 \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
-\author{AUTHOR} % Your name
+\author{Nicholas Christiny} % Your name
 \date{\normalsize\today} % Today's date or a custom date
 
 \begin{document}
@@ -69,11 +69,41 @@
 
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
 
+\section{\textsection5.1}
+\subsection{3. Let $P(n)$ be the statement that $1^2 + 2^2 +...+n^2 = n(n + 1)(2n + 1)/6$ for the positive integer n.}
+\subsubsection{a) What is the statement $P(1)$?}
+Base case.
+\subsubsection{b) Show that $P(1)$ is true, completing the basis step of the proof.}
+\subsubsection{c) What is the inductive hypothesis?}
+\subsubsection{d) What do you need to prove in the inductive step?}
+\subsubsection{e) Complete the inductive step, identifying where you use the inductive hypothesis.}
+\subsubsection{f) Explain why these steps show that this formula is true whenever $n$ is a positive integer.}
 
-
+\subsection{5. Prove that $1^2 +3^2 +5^2 +...+(2n+1)^2 =(n+1) (2n + 1)(2n + 3)/3$ whenever $n$ is a nonnegative integer.}
+%----------------------------------------------------------------------------------------
+\subsection{7. Prove that $3+3\cdot 5+3 \cdot 5^2+...+3 \cdot 5^n=3(5^{n+1} -1)/4$ whenever $n$ is a nonnegative integer.}
 
 %----------------------------------------------------------------------------------------
 
+\subsection{21. Prove that $2^n > n^2$ if $n$ is an integer greater than $4$.}
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{31. Prove that $2$ divides $n^2 + n$ whenever $n$ is a positive integer.}
+
+%----------------------------------------------------------------------------------------
+\subsection{39. Prove that if $A_1,A_2,...,A_n$ and $B_1,B_2,...,B_n$ are sets such that $A_j \subseteq B_j$ for $j = 1,2,...,n,$ then}
+\begin{displaymath}
+ \displaystyle\bigcap^n_{j = 1} A_j \subseteq \bigcap^n_{j = 1} B_j.
+\end{displaymath}
+
+\subsection{43. Prove that if $A_1, A_2,..., A_n$ are subsets of a universal set $U$ , then}
+\begin{displaymath}
+ \displaystyle\bigcup^n_{k = 1} A_k = \bigcap^n_{k = 1} \overline{A_k}.
+\end{displaymath}
+%----------------------------------------------------------------------------------------
 
 \end{document}
