@@ -78,24 +78,51 @@ Basis step.
 \subsubsection{b) Show that $P(1)$ is true, completing the basis step of the proof.}
 $P(1)=1(1+1)(2\cdot 1+1)/6 = 2\cdot (3/6)  = 1$. $P(1)$ is a true statement.
 \subsubsection{c) What is the inductive hypothesis?}
-The inductive hypothesis is that if basis step applies for $P(n)$ then $P(n+1)$ is true as well.
+The inductive hypothesis is $P(k)$ is $1^2 + 2^2 +...+k^2 = k(k + 1)(2k + 1)/6$ where $k$ is some integer.
 \subsubsection{d) What do you need to prove in the inductive step?}
-...
-
+We show for each $k\geq 1$, $P(k)$ implies $P(k+1)$. Assuming part c, then \\
+$1^2 + 2^2 +...+ k^2 +(k+1)^2 = (k+1)((k+1) + 1)(2(k+1) + 1)/6$ \\
+$= (k+1)(k+2)(2k+3)/6$
 \subsubsection{e) Complete the inductive step, identifying where you use the inductive hypothesis.}
-...
-
+Add $(k+1)^2$ to both sides, as in the inductive hypothesis: \\
+$1^2 + 2^2 +...+k^2 +(k+1)^2 =[k(k + 1)(2k+ 1)/6] + (k + 1)^2$ \\
+$= [(k+1)/6][k(2k+1)+6(k+1)]$ \\
+$= [(k+1)/6](2k^2 + 7k + 6) $ \\
+$= [(k+1)/6](k+2)(2k+3)$ \\
+Therefore, we show $P(k+1) = (k+1)(k+2)(2k+3)/6$ which proves our inductive hypothesis from part d.
 \subsubsection{f) Explain why these steps show that this formula is true whenever $n$ is a positive integer.}
-...
-
+After establishing both basis step and the inductive step, by the principle of mathematical induction, we prove the inductive hypothesis and prove the statement is true for every positive integer $n$.
 
 \subsection{5. Prove that $1^2 +3^2 +5^2 +...+(2n+1)^2 =(n+1) (2n + 1)(2n + 3)/3$ whenever $n$ is a nonnegative integer.}
-...
+$P(n) = 1^2 + 3^2 + 5^2 + $...$+ (2n+1)^2 = (n+1)(2n+1)(2n+3)/3 $ \\
+Basis step: $P(0): (2\cdot0+1)^2 = (0+1)(0+1)(2\cdot0+3)/3$ \\
+$1 = 1$ so basis step is true.  \\
+We assume if $P(k)$ true, where $(k+1)(2k+1)(2k+3)/3$ then $P(k+1)$ true as well. (Inductive Hypothesis.)\\
+So, for $P(k+1)$, $1^2 + 3^2 + 5^2 +$ .. $+ (2k+1)^2 + [2(k+1)+1]^2 = (k+1)(2k+1)(2k+3)/3 + (2k+3)^2$\\
+$= (2k+3)[(k+1)(2k+1)/3 + (2k+3)]$ \\
+$= (2k+3)[(2k^2 + 3k + 1)/3 +(2k+3)]$ \\
+$= (2k+3)(2k^2 + 3k + 1 + 6k + 9)/3$ \\
+$= (2k+3)(2k^2 + 9k + 10)/3$ \\
+$= (2k+3)(2k + 5)(k + 2)/3$ \\
+$= [(k+1)+1][2(k+1) +1][2(k+1) +3]/3$\\
+By principle of mathematical induction, we prove basis step and inductive step leading to inductive hypothesis and prove original statement is true for every positive integer, $n$.
 
 %----------------------------------------------------------------------------------------
 \subsection{7. Prove that $3+3\cdot 5+3 \cdot 5^2+...+3 \cdot 5^n=3(5^{n+1} -1)/4$ whenever $n$ is a nonnegative integer.}
-...
-
+$P(n)$ is the original statement above where $n$ is nonnegative integer.\\
+Basis step: $P(0)$ so, $3\cdot5^0 = 3(5^1 -1)/4$ \\
+$3=3$ proving the basis step. \\
+$P(k)$ is $3\cdot5^k = 3(5^{k+1} - 1)/4$
+and $P(k+1)$ is $3\cdot5^{k+1} = 3(5^{(k+1)+1} - 1)/4$ is the inductive hypothesis. \\
+We assume the inductive hypothesis is true: $\sum_{j=0}^{k} 3\cdot5^j = 3(5^{k+1} -1)/4$ \\
+Then, $\sum_{j=0}^{k+1} 3\cdot5^j = 3(5^{(k+1)+1} -1)/4$ \\
+$= (\sum_{j=0}^k 3\cdot5^j) + 3\cdot5^{k+1}$ \\
+$ = 3(5^{k+1}-1)/4 + 3\cdot5^{k+1}$ \\
+$ = 3(5^{k+1}-3)/4 + (4\cdot3\cdot5^{k+1})/4$ \\
+$ = 3\cdot5^{k+1} -3 + 12(5^{k+1})/4$ \\
+$ = 3(5^{k+1} + 4\cdot5^{k+1} -1)/4$ \\
+$ = 3(5^{k+2}-1)/4$ , which is the value of $P(k+1)$ from hypothesis above. \\
+By principle of mathematical induction, by proving basis step and inductive step leading to inductive hypothesis and we are able to prove original statement is true for every positive integer, $n$.
 
 %----------------------------------------------------------------------------------------
 
@@ -106,16 +133,16 @@ The inductive hypothesis is that if basis step applies for $P(n)$ then $P(n+1)$ 
 %----------------------------------------------------------------------------------------
 
 \subsection{31. Prove that $2$ divides $n^2 + n$ whenever $n$ is a positive integer.}
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+...
 %----------------------------------------------------------------------------------------
 \subsection{39. Prove that if $A_1,A_2,...,A_n$ and $B_1,B_2,...,B_n$ are sets such that $A_j \subseteq B_j$ for $j = 1,2,...,n,$ then}
 \begin{displaymath}
  \displaystyle\bigcap^n_{j = 1} A_j \subseteq \bigcap^n_{j = 1} B_j.
 \end{displaymath}
-
+...
 \subsection{43. Prove that if $A_1, A_2,..., A_n$ are subsets of a universal set $U$ , then}
 \begin{displaymath}
- \displaystyle\bigcup^n_{k = 1} A_k = \bigcap^n_{k = 1} \overline{A_k}.
+ \displaystyle\overline{\bigcup^n_{k = 1} A_k} = \bigcap^n_{k = 1} \overline{A_k}.
 \end{displaymath}
 ...
 
@@ -125,29 +152,31 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 \section{\textsection6.1}
 \subsection{1. There are 18 mathematics majors and 325 computer science majors at a college.}
 \subsubsection{a) In how many ways can two representatives be picked so that one is a mathematics major and the other is a computer science major?}
-...
+Using product rule, 18 ways of picking math major, 325 ways of picking CS major. \\
+$18 \cdot 325 = 5850$
 
 \subsubsection{b) In how many ways can one representative be picked who is either a mathematics major or a computer science major?}
-...
+Sum rule, $325 + 18 = 343$
 
 %----------------------------------------------------------------------------------------
 
 \subsection{5. Six different airlines fly from New York to Denver and seven fly from Denver to San Francisco. How many different pairs of airlines can you choose on which to book a trip from New York to San Francisco via Denver, when you pick an airline for the flight to Denver and an airline for the continuation flight to San Francisco?}
-...
+Product rule, $6 \cdot 7 = 42$
 
 %----------------------------------------------------------------------------------------
 \subsection{9. How many different three-letter initials are there that begin with an A?}
-...
-
+Three spaces available, Pick first one as A, two spaces left with 26 choices each, so by product rule:\\
+$26 \cdot 26 = 676$
 %----------------------------------------------------------------------------------------
 
 \subsection{27. A committee is formed consisting of one representative from each of the 50 states in the United States, where the representative from a state is either the governor or one of the two senators from that state. How many ways are there to form this committee?}
-...
+Three choices made 50 times. $3^{50}$ number of ways. 
  
 %----------------------------------------------------------------------------------------
 
 \subsection{29. How many license plates can be made using either two uppercase English letters followed by four digits or two digits followed by four uppercase English letters?}
-... 
+$(2^{26} \cdot 4^{10})\cdot (2^{10}\cdot 4^{26}) = 52,457,600$
+
 %----------------------------------------------------------------------------------------
 
 \subsection{31. How many license plates can be made using either two or three uppercase English letters followed by either two or three digits?}
@@ -157,10 +186,11 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 \subsection{47. In how many ways can a photographer at a wedding arrange six people in a row, including the bride and groom, if}
 \subsubsection{a) the bride must be next to the groom?}
-...
+4! ways to rearrange remaining four, other than bride and groom. 10 total spaces.\\
+$4! \cdot 10 = 240$
  
 \subsubsection{b) the bride is not next to the groom?}
-...
+$4! \cdot 20 = 480$
 
 \subsubsection{c) the bride is positioned somewhere to the left of the groom?}
 ...
@@ -170,36 +200,212 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 \section{\textsection6.2}
 \subsection{1. Show that in any set of six classes, each meeting regularly once a week on a particular day of the week, there must be two that meet on the same day, assuming that no classes are held on weekends.}
-...
-
+By Pigeonhole Principle, it shows that because there are 5 weekdays (bird hole) and 6 classes (birds), then at least two of the classes must be on the same day, (because even if best case scenario where there is only one class per day, then there is still one class is left over and must go on same day as another class).
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
 
 \subsection{3. A drawer contains a dozen brown socks and a dozen black socks, all unmatched. A man takes socks out at random in the dark.}
-\subsubsection{a) How many socks must he take out to be sure that he
-has at least two socks of the same color?}
-...
+\subsubsection{a) How many socks must he take out to be sure that he has at least two socks of the same color?}
+So from Pigeonhole Principle, the colors are the "boxes" and socks are the "objects" or birds. We can seee that we choose 1 at random and then another without matching then we have both colors of socks in hand, we only need to pull one more to get a matching pair of either color. \\
+The answer is 3. 
 
 \subsubsection{b) How many socks must he take out to be sure that he has at least two black socks?}
-...
+Worst case, we pull all twelve blue socks and then pull one black and then the second black sock to make a  pair. \\
+The answer is 14. 
+
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
 
 \subsection{7. Let $n$ be a positive integer. Show that in any set of $n$ consecutive integers there is exactly one divisible by $n$.}
+Set of consecutive integers: $a,a+1,a+2,$...$,a+n-1$ \\
 ...
+
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
 
 \subsection{9. What is the minimum number of students, each of whom comes from one of the 50 states, who must be enrolled in a university to guarantee that there are at least 100 who come from the same state?}
-...
+Generalized pigeonhole principle: $N = k(r-1) +1$, where r is smallest integer satisfying $\lceil N/k\rceil \geq r$. \\
+Therefore, $N=50(100-1) +1 = 4951$
+
 %----------------------------------------------------------------------------------------
 %----------------------------------------------------------------------------------------
 
 \section{\textsection6.3}
 \subsection{1. List all the permutations of $\{a, b, c\}$.}
-$\{a, b, c\}$, $\{a, c, b\}$, $\{c, b, a\}$, $\{b, a, c\}$, $\{b, c, a\}$, $\{c, a, b\}$ 
+abc, acb, cba, bac, bca, cab
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+\subsection{4. Let $S = \{1,2,3,4,5\}$.}
+\subsubsection{a) List all the 3-permutations of S.}
+$P(n,r) = n(n-1)(n-2)$...$(n-r+1)$ \\
+$P(5,3) = 5 \cdot 4 \cdot 3 = 60$ 3-permutations of S. \\
+Can also be shown by $5!/(5-3)! = 60$, so there are 60 3-permutations of S. 
+%----------------------------------------------------------------------------------------
+\subsubsection{b) List all the 3-combinations of S.}
+$C(5,3) = {5 \choose 3} = 5!/[3!(5-3)!] = 10$, so there are 10 3-combinations of S.
 
 %----------------------------------------------------------------------------------------
 
+\subsection{9. How many possibilities are there for the win, place, and show (first, second, and third) positions in a horse race with 12 horses if all orders of finish are possible?}
+$P(12,3) = 12 \cdot 11 \cdot 10 = 1320$
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\subsection{18. A coin is flipped eight times where each flip comes up either heads or tails. How many possible outcomes}
+\subsubsection{a) are there in total?}
+2 possible choices made 8 times, $2^8$ or 256 outcomes possible. 
+\subsubsection{b) contain exactly three heads?}
+$C(8,3) = n!/[r!(n-r!)] = 8!/(3!\cdot 5!) = 56$ ways of getting exactly 3 heads.
+\subsubsection{c) contain at least three heads?}
+Must have at most 5 tails, $r=5$.\\
+Add $C(8,5)$ and $C(8,3)$ \\
+$C(8,5) = 8!/(5!\cdot 3!) = 56$ \\
+$C(8,3) = 8!/(3!\cdot 5!) = 56$ \\
+$C(8,5) + C(8,3) = 112$ ways.
+\subsubsection{d) contain the same number of heads and tails?}
+$C(8,4) = 8!/(4!\cdot 4!) = 70$ ways.
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{23. How many ways are there for eight men and five women to stand in a line so that no two women stand next to each other? [Hint: First position the men and then consider possible positions for the women.]}
+$C(13,8)\cdot C(13,5) = [13!/(8!\cdot 5!)] \cdot [13!/(5!\cdot 8!)]$ \\
+$ = 1287 \cdot 1287 = 1,656,369$
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\subsection{28. A professor writes 40 discrete mathematics true/false questions. Of the statements in these questions, 17 are true. If the questions can be positioned in any order, how many different answer keys are possible?}
+$C(40,17) = 40!/(17!\cdot 23!) = 88,732,378,800$ possible keys (? seems way too high) 
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\subsection{30. Seven women and nine men are on the faculty in the mathematics department at a school.}
+\subsubsection{a) How many ways are there to select a committee of five members of the department if at least one woman must be on the committee?}
+$C(7,1)\cdot C(9,4) = 7!/(1!\cdot 6!) \cdot 9!/(4!\cdot 5!) = 7\cdot 126 = 882$
+\subsubsection{b) How many ways are there to select a committee of five members of the department if at least one woman and at least one man must be on the committee?}
+$C(7,1) \cdot C(9,1) = 7 \cdot 9 = 63$
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{34. Suppose that a department contains 10 men and 15 women. How many ways are there to form a commit- tee with six members if it must have more women than men?}
+$C(10,3) \cdot C(15,3) = 10!/(3! \cdot 7!) \cdot 15!/(3!\cdot 12!) = 120 \cdot 455 = 54,600$
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\section{\textsection6.4}
+\subsection{3. Find the expansion of $(x + y )^6$.}
+$(x + y )^6 = \sum\limits_{j=0}^6 {6 \choose j}x^{6-j}y^j  $\\
+$= {6 \choose 0}x^6 + {6 \choose 1}x^5y + {6 \choose 2}x^4y^2 + {6 \choose 3}x^3y^3 + {6 \choose 4}x^2y^4 + {6 \choose 5}xy^5 + {6 \choose 6}y^6 $ \\\\
+$= x^6 + 6x^5y + 15x^4y^2 + 20x^3y^3 + 15x^2y^4 + 6xy^5 + y^6$
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\subsection{4. Find the coefficient of $x^5y^8$ in $(x + y)^{13}$.}
+From Binomial Theorem, the coefficient is: ${n \choose j} = {13 \choose 8} = 13!/(8!\cdot 5!) = 1287 $
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\subsection{5. How many terms are there in the expansion of $(x + y)^{100}$ after like terms are collected?}
+$j$ from 0 to 100 or 101 terms. 
+
+%----------------------------------------------------------------------------------------
+
+\subsection{8. What is the coefficient of $x^8y^9$ in the expansion of $(3x + 2y)^{17}$?}
+${17 \choose 9} 3^{17-9} \cdot 2^9 = {17 \choose 9}3^8\cdot 2^9$ \\
+Evaluates to 81,662,929,920. 
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\subsection{12. The row of Pascal$\textquotesingle$s triangle containing the binomial coefficients  ${10 \choose k}$, $0 \leq k \leq 10$, is:
+$1$  $10$  $45$  $120$  $210$  $252$  $210$  $120$  $45$  $10$  $1$. Use Pascal$\textquotesingle$s identity to produce the row immediately following this row in Pascal$\textquotesingle$s triangle.}
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{19. Prove Pascal$\textquotesingle$s identity, using the formula for ${n \choose r}$}
+${n \choose k-1} + {n \choose k} = n!/[(k-1)!(n-k+1)!] + n!/[k!(n-k)!]$ \\
+$= n!/[k!(n-k+1)!] \cdot [k+(n-k+1)] = (n+1)!/[k!(n+1-k)!] = 1/({n+1 \choose k})$
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\section{\textsection8.5}
+\subsection{1. How many elements are in $A_1 \cup A_2$ if there are 12 elements in ${A_1}$, 18 elements in $A_2$, and}
+\subsubsection{a) $A_1 \cap A_2 = \emptyset $?}
+$A_1$ intersect $A_2$ is empty set, therefore they do not overlap, so $|A_1 \cup A_2| = |A_1|+ |A_2| = 30$
+\subsubsection{b) $|A_1 \cap A_2|=1$?}
+Only one item intersects. $30 - 1 = 29$.
+\subsubsection{c) $|A_1 \cap A_2|=6$?}
+6 items intersect. $30 -6 = 24$.
+\subsubsection{d) $A_1 \subseteq A_2$?}
+If $A_1 \subseteq A_2$ then all elements in $A_1$ are in $A_2$ already. Therefore, $A_1 \cup A_2$ is just $|A_2|$ or 18.
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{3. A survey of households in the United States reveals that 96 per cent have at least one television set, 98 per cent have telephone service, and 95 per cent have telephone service and at least one television set. What percentage of households in the United States have neither telephone service nor a television set?}
+Rearranging the given information: \\
+4 per cent do not have TV \\
+2 per cent do not have phone \\
+5 per cent do not have phone and do not have TV \\
+$|A_1 \cup A_2| = |A_1| + |A_2| - |A_1 \cap A_2|$ \\
+So, $ 4\% + 2\% - 5\% = 6\% - 5\% = 1\%$
+
+%----------------------------------------------------------------------------------------
+
+\subsection{7. There are 2504 computer science students at a school. Of these, 1876 have taken a course in Java, 999 have taken a course in Linux, and 345 have taken a course in C. Further, 876 have taken courses in both Java and Linux, 231 have taken courses in both Linux and C, and 290 have taken courses in both Java and C. If 189 of these students have taken courses in Linux, Java, and C, how many of these 2504 students have not taken a course in any of these three programming languages?}
+2504 total students. \\
+$|J| = 1876$ students taken Java \\
+$|L| = 999$ students taken Linux \\
+$|C| = 345$ students taken C \\
+$|J\cap L| =876$ students taken both Java and Linux \\
+$|J\cap C| =290$ students taken both Java and C \\
+$|L\cap C| =231$ students taken both Linux and C \\
+Finally, $|J \cap L \cap C| = 189$ \\
+$ |J \cup L \cup C| = |J| + |L| + |C| - |J\cap L| - |J\cap C| - |L\cap C| + |J \cap L \cap C|$\\
+$= 1876 + 999 + 345 -231 -290 -876 +189 = 2012$ students have taken one of these classes. \\
+Therefore, $2504 - 2012 = 492$ students have not taken any of these classes. 
+
+ 
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{9. How many students are enrolled in a course either in calculus, discrete mathematics, data structures, or programming languages at a school if there are 507, 292, 312, and 344 students in these courses, respectively; 14 in both calculus and data structures; 213 in both calculus and programming languages; 211 in both discrete mathematics and data structures; 43 in both discrete mathematics and programming languages; and no student may take calculus and discrete mathematics, or data structures and programming languages, concurrently?}
+Using A for Calculus, B for Discrete Mathematics, C for Data Structures, and D for programming. \\
+$|A \cap C| = 14$\\
+$|A \cap D| = 213$\\
+$|B \cap C| = 211$\\
+$|B \cap D| = 43$\\
+$|A \cap B| = 0$\\
+$|C \cap D| = 0$\\
+$|A \cap B \cap C \cap D| = 0$ (due to above conditions)\\
+$|A \cup B \cup C \cup D| = |A| + |B| +|C| + |D| - |A \cap C| - |A \cap D| - |B \cap C|$
+$= 507 + 292 + 312 + 344 - 14 - 213 - 211 - 43 = 974$ 
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+\subsection{11. Find the number of positive integers not exceeding 100 that are either odd or the square of an integer.}
+Let A be set of positive integers not exceeding 100 that are odd. \\
+Let B be set of positive integers not exceeding 100 that are squares of integers. \\
+We are looking for $|A\cup B|$ \\
+$|A| = 50$, there are 50 odd numbers from 1 to 100 inclusive. \\
+$B = \{1,4,9,16,25,36,49,64,81,100\}$, so $|B| = 10$ \\
+$|A \cap B| = 5$, the number of odd squares of integers from 1 to 100 inclusive. \\
+Therefore, $|A\cup B| = |A| + |B| - |A \cap B| = 50 + 10 - 5 = 55$
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
 
 \end{document}
